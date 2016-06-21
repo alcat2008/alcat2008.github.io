@@ -1,38 +1,39 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+<footer>
+    {% include paginate.html %}
+    {% include suggestion.html %}
+    {% if page.url == "/about" or paginator.total_pages == 1 or page.url == "/404" %}
+        <div class="container" style="text-align: center; margin-bottom: 20px">
+            <a target="_blank" class="button" href="https://twitter.com/{{ site.twitter_username }}">
+                Follow me on twitter
+            </a>
+        </div>
+    {% endif %}
+    <hr />
+    <div class="user-footer">
+        <div class="copyright alignable pull-left">
+            {% if site.copyright %}
+                <h2> &copy;{{ site.copyright }}</h2>
+            {% else %}
+                <h2> &copy;{{ site.title }}</h2>
+            {% endif %}
+        </div>
+        <div class="alignable pull-right">
+            <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}" class="button">
+                @{{ site.twitter_username }}
+            </a>
+            <a href="mailto:{{ site.email }}" class="button">
+                mail
+            </a>
+            <a target="_blank" href="{{ site.url }}{{ site.baseurl }}/feed.xml" class="button">
+                rss
+            </a>
+        </div>
     </div>
-
-  </div>
-
+    <div style="clear:both"></div>
+    <hr />
+    <div class="theme-footer">
+        <p class="alignable pull-left" style="display: inline-block">
+            Built with <a href="http://jekyllrb.com/" class="different-highlight underline">Jekyll</a>
+        </p>
+    </div>
 </footer>
