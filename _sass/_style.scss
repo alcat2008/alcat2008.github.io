@@ -294,3 +294,38 @@ hr {
     @media (max-width: $break-small) {
     }
 }
+
+
+/* Share
+ * * * * * * * * * * */
+.icon {
+    border: 1px solid #afb6ca;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    zoom: 1;
+    text-indent: -9999px;
+    margin: 0 8px;
+    opacity: 0.7;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.icon-github {
+    background: url("/images/github.png") center no-repeat #afb6ca;
+ }
+.icon-github:hover {
+    background: url("/images/github.png") center no-repeat $accent-color;
+}
+.icon-mail {
+	background: url("/images/mail.png") center no-repeat #afb6ca;
+}
+.icon-mail:hover {
+	background: url("/images/mail.png") center no-repeat $accent-color;
+}
+.icon-rss {
+	background: url("/images/rss.png") center no-repeat #afb6ca;
+}
+.icon-rss:hover {
+	background: url("/images/rss.png") center no-repeat $accent-color;
+}

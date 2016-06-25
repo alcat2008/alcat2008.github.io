@@ -24,8 +24,6 @@ intro: false         # Tip: Remove the span from site_heading if intro is set to
 short_bio: >
     Welcome! This is <span>alcat2008</span>, a mobile friendly theme for Jekyll.
 
-permalink: /:title.html
-
 # Comments are powered by disqus
 comments: false
 
@@ -51,36 +49,44 @@ tracking_id: UA-79660442-1 # GA Tracking ID
 # Social Stuff | open graph and twitter cards
 og_image: "images/accent.png" # This will show in facebook thumbnails
 
-####################################
-####################################
-####################################
-### Build Settings | Don't Touch ###
-####################################
-####################################
-####################################
 
+# Jekyll configuration
+# permalink:   /:categories/:title/
+permalink: /:title.html
 markdown: kramdown
+highlighter: rouge
 
 gems:
-    - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 
 sass:
-    style: compressed
-    sass_dir: _sass
+  style: compressed
+  sass_dir: _sass
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 
 # Scopes
 defaults:
-    -
-        scope:
-            path:   ""
-            type:   "pages"
-        values:
-            layout: "page"
-    -
-        scope:
-            path:   ""
-            type:   "posts"
-        values:
-            layout: "post"
+  -
+    scope:
+      path:   ""
+      type:   "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path:   ""
+      type:   "posts"
+    values:
+        layout: "post"
 
 exclude: [vendor] # For travis ci
