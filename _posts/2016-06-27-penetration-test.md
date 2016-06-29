@@ -84,3 +84,25 @@ categories: test
 # 漏洞利用
 
   漏洞利用是获得系统控制权限的重要途径。用户从目标系统中找到容易攻击的漏洞，然后利用该漏洞获取权限，从而实现对目标系统的控制。
+
+## Metasploit
+
+  Metasploit是一款开源的安全漏洞检测工具。它可以帮助用户识别安全问题，验证漏洞的缓解措施，并对某些软件进行安全性评估，提供真正的安全风险情报。当用户第一次接触Metasploit渗透测试框架软件（MSF）时，可能会被它提供如此多的接口、选项、变量和模块所震撼，而感觉无所适从。Metasploit软件为它的基础功能提供了多个用户接口，包括终端、命令行和图形化界面等。
+
+### Armitage
+
+  Armitage组件是Metasploit框架中一个完全交互式的图形化用户接口。 Armitage工具包含Metasploit控制台，通过使用其标签特性，用户可以看到多个Metasploit控制台或多个Meterpreter会话。
+
+### MSFCONSOLE
+
+  MSF终端（MSFCONSOLE）是目前Metasploit框架最为流行的用户接口，而且也是非常灵活的。因为MSF终端是Metasploit框架中最灵活、功能最丰富及支持最好的工具之一。MSFCONSOLE主要用于管理Metasploit数据库，管理会话、配置并启动Metasploit模块。本质上来说，就是为了利用漏洞，MSFCONSOLE将获取用户连接到主机的信息，以至于用户能启动渗透攻击目标系统。
+
+### MSFCLI
+
+  为了完成Metasploit的攻击任务，需要使用一个接口。MSFCLI刚好实现这个功能。为了学习Metasploit或测试/写一个新的渗透攻击，MSFCLI是一个很好的接口。
+
+  MSF命令行和MSF终端为Metasploit框架访问提供了两种截然不同的途径，MSF终端以一种用户友好的模式来提供交互方式，用于访问软件所有的功能特性，而MSFCLI则主要考虑脚本处理和与其他命令行工具的互操作性。
+
+### Meterpreter
+
+  Meterpreter是Metasploit框架中的一个杀手锏，通常作为利用漏洞后的攻击载荷所使用，攻击载荷在触发漏洞后能够返回给用户一个控制通道。当使用Armitage、MSFCLI或MSFCONSOLE获取到目标系统上的一个Meterpreter连接时，用户必须使用Meterpreter传递攻击载荷。MSFCONSOLE用于管理用户的会话，而Meterpreter则是攻击载荷和渗透攻击交互。
