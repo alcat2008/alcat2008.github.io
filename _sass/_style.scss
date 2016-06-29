@@ -13,13 +13,15 @@ body {
     font-family: $font-stack-one;
     height: 100%;
     overflow: auto;
+		line-height: 1.6;
+		word-wrap: break-word;
 }
 .site-name {
     color: $accent-color;
 }
 .faded {
     color: $light-color;
-    font-weight: lighter;
+    font-weight: normal;;
 }
 .page-suggestion {
     @media (max-width: $break-medium) {
@@ -36,7 +38,7 @@ body {
 * * * * * * * * * * * */
 #intro {
     color: darken($accent-color, 40);
-    font-weight: ligher;
+    font-weight: normal;
     text-align: center;
     font-size: 20px;
     margin-bottom: 20px;
@@ -102,7 +104,7 @@ a:hover {
     border-bottom: 2px solid $accent-color;
 }
 .button {
-    font-weight: lighter;
+    font-weight: normal;;
     font-size: 13px;
     border-radius: 20px;
     background: #fff;
@@ -145,7 +147,7 @@ footer {
     }
     h2 {
         font-size: 20px;
-        font-weight: lighter;
+        font-weight: normal;;
     }
 }
 
@@ -251,7 +253,7 @@ footer {
 
 .post-date {
     font-family: 'Montserrat';
-    font-weight: lighter;
+    font-weight: normal;;
 }
 
 /* Styling
@@ -260,7 +262,7 @@ hr {
     border-top: 0.5px solid $underline-color;
 }
 .theme-footer {
-    font-weight: lighter;
+    font-weight: normal;;
     font-size: 15px;
     color: $light-color;
     padding: $base-spacing;
@@ -290,7 +292,7 @@ hr {
 .about-stub {
     margin: 0 $base-spacing/2;
     padding: $base-spacing;
-    font-weight: lighter;
+    font-weight: normal;;
     @media (max-width: $break-small) {
     }
 }

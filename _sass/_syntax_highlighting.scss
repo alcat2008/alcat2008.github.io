@@ -6,14 +6,22 @@
 pre code {
   border-radius: 10px;
   font-family:  $code-font;
-  padding: $base-spacing $base-spacing/10;
-  margin: $base-spacing;
+  // padding: $base-spacing $base-spacing/10;
+  // margin: $base-spacing;
   @media(max-width: $break-small) {
       font-size: 10px;
   }
 }
 
-.highlight  { background: $well-color;}//$git-black-color; }
+.highlight  {
+  // background: $well-color;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: $well-color;
+  border-radius: 3px;
+}//$git-black-color; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
