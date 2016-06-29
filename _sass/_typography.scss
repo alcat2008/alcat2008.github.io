@@ -1,6 +1,14 @@
 @import "syntax_highlighting";
 @import "table";
 
+.inline-code {
+  padding: 0.3em 0.5em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
 .content {
     hr {
         margin: $base-spacing 0;
@@ -18,11 +26,6 @@
     code {
         // font-size: $base-font-size;
         font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        // padding: 0.2em;
-        // margin: 0;
-        // font-size: 85%;
-        // background-color: rgba(0,0,0,0.04);
-        // border-radius: 3px;
     }
     .post-title {
         margin-top: 0.1em;
@@ -115,12 +118,7 @@
       // color: $git-black-color;
       // padding: 0.1em 0.1em 0.1em 0.1em;
       // border-radius: 0.3em;
-      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-      padding: 0.2em;
-      margin: 0;
-      font-size: 85%;
-      background-color: rgba(0,0,0,0.04);
-      border-radius: 3px;
+      @extend .inline-code;
     }
     ul, ol {
         padding: $base-spacing/5 $base-spacing;
@@ -135,6 +133,10 @@
       font-size: 16px;
       font-weight: normal;;
       margin: 0.8em 0em 0.8em 0.5em;
+
+      code {
+        @extend .inline-code;
+      }
     }
     li p {
         font-size: 16px;
