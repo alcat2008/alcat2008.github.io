@@ -1,28 +1,29 @@
 # User Settings | Edit there as per required
 
-title: alcat2008
+title: front-ender.me
 url: "http://front-ender.me"
 baseurl: ""
 
 # This will show up at the top of index page
 site_heading: >
-    alcat2008 <span class="faded">'s blog</span>
+    front-ender <span class="faded">'s blog</span>
 
 email: ge_yangyang@126.com
-author: alcat2008
+author: front-ender.me
 # This description will show up in google search results
 # (for index page) etc.
 description: >
     front-ender space
 
 # This will what will show against &copy; in the footer
-copyright: alcat2008
+copyright: front-ender.me
 # Toggle your short bio, which will displayed on your index page
 # Just toggle it and run jekyll again to see
-intro: false         # Tip: Remove the span from site_heading if intro is set to true
+intro: false
+# Tip: Remove the span from site_heading if intro is set to true
 # This will be displayed in your intro
 short_bio: >
-    Welcome! This is <span>alcat2008</span>, a mobile friendly theme for Jekyll.
+    Welcome! This is <span>front-ender.me</span>, a mobile friendly theme for Jekyll.
 
 # Comments are powered by disqus
 comments: false
