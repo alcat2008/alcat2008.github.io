@@ -319,6 +319,12 @@ hr {
 .icon-github:hover {
     background: url("/images/github.png") center no-repeat $accent-color;
 }
+.icon-csdn {
+    background: url("/images/csdn.png") center no-repeat #afb6ca;
+ }
+.icon-csdn:hover {
+    background: url("/images/csdn.png") center no-repeat $accent-color;
+}
 .icon-mail {
 	background: url("/images/mail.png") center no-repeat #afb6ca;
 }
