@@ -1,7 +1,7 @@
 # User Settings | Edit there as per required
 
 title: front-ender.me
-url: "http://front-ender.me"
+url: "http://front-ender.me/"
 baseurl: ""
 
 # This will show up at the top of index page
@@ -26,7 +26,7 @@ short_bio: >
     Welcome! This is <span>front-ender.me</span>, a mobile friendly theme for Jekyll.
 
 # Comments are powered by disqus
-comments: false
+comments: true
 
 # keep about_stub roughly 12 words long for best results
 # This will show up at the bottom of each post
