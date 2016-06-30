@@ -42,7 +42,7 @@ favicon: true
 favicon_location: "images/favicon.ico"
 
 profile_picture: images/fire.jpg
-paginate: 5
+paginate: 13
 paginate_path: "/page/:num"
 tracking_id: UA-79660442-1 # GA Tracking ID
 

@@ -100,11 +100,12 @@
     }
     blockquote {
         font-size: $base-font-size;
-        padding: 0 0 0 $base-spacing;
-        margin: $base-spacing 0;
-        color: $medium-gray-color;
+        padding: 0 15px;
+        margin: 0;
+        color: #777;
         line-height: 1.8;
-        border-left: $small-spacing solid $light-gray-color;
+        border-left: 4px solid #ddd;
+
     }
     img {
         width: auto;
@@ -124,7 +125,7 @@
         padding: $base-spacing/5 $base-spacing;
     }
     ul {
-        list-style-type: circle;
+        list-style-type: disc;
     }
     ol {
         list-style-type: decimal;
