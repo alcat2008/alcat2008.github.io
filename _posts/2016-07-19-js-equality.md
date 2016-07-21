@@ -81,6 +81,15 @@ console.log([]==[]); // false
 console.info(2 == [2]); // true
 ```
 
+## '规则'
+
+[通过一张简单的图，让你彻底地、永久地搞懂JS的==运算](https://segmentfault.com/a/1190000006012804) 一文的结尾处总结了 `==` 的规则，还是非常准确的。
+
+- `undefined == null`，结果是true。且它俩与所有其他值比较的结果都是false。
+- `String == Boolean`，需要两个操作数同时转为Number。
+- `String/Boolean == Number`，需要String/Boolean转为Number。
+- `Object == Primitive`，需要Object转为Primitive(具体通过valueOf和toString方法)。
+
 ## 参考
 
 若多此文内容还有疑问，或者想深入学习，请参考知乎讨论 [Javascript 中 == 和 === 区别是什么？](https://www.zhihu.com/question/31442029)
