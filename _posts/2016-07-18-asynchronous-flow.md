@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript 异步编程思考
 date: '2016-07-18 08:00:00 +0800'
-categories: JavaScript
+categories: javascript
 ---
 
 # JavaScript 异步编程思考

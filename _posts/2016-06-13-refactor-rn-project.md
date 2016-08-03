@@ -2,7 +2,7 @@
 layout: post
 title: 重构 React Native 项目
 date: '2016-06-13 15:37:01 +0800'
-categories: React Native
+categories: react-native
 ---
 
 # Refactor for ios

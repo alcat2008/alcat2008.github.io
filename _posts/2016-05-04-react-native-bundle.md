@@ -2,7 +2,7 @@
 layout: post
 title: React Native 项目打包
 date: '2016-05-04 15:37:01 +0800'
-categories: React Native
+categories: react-native
 ---
 
 # Steps to release ipa file for react native

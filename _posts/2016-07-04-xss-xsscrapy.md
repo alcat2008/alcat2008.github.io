@@ -2,7 +2,7 @@
 layout: post
 title: XSS 漏洞检查 — xsscrapy
 date: '2016-07-04 10:00:00 +0800'
-categories: Test
+categories: test
 ---
 
 # xsscrapy

@@ -2,7 +2,7 @@
 layout: post
 title: 如何让 Finder 显示隐藏文件和文件夹
 date: '2016-07-14 10:00:00 +0800'
-categories: Mac
+categories: mac
 ---
 
 # 如何让 Finder 显示/隐藏文件和文件夹

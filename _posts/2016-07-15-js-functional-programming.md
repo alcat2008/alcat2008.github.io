@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript Functional Programming
 date: '2016-07-15 08:00:00 +0800'
-categories: JavaScript
+categories: javascript
 ---
 
 # JavaScript Functional Programming

@@ -42,7 +42,7 @@ github_username: alcat2008
 favicon: true
 favicon_location: "images/favicon.ico"
 
-profile_picture: images/fire.jpg
+profile_picture: ../images/fire.jpg
 paginate: 13
 paginate_path: "/page/:num"
 tracking_id: UA-79660442-1 # GA Tracking ID
@@ -52,8 +52,8 @@ og_image: "images/accent.png" # This will show in facebook thumbnails
 
 
 # Jekyll configuration
-# permalink:   /:categories/:title/
-permalink: /:title.html
+permalink:   /:categories/:title.html
+# permalink: /:title.html
 markdown: kramdown
 highlighter: rouge
 

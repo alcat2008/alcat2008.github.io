@@ -2,7 +2,7 @@
 layout: post
 title: 前端架构
 date: '2016-04-29 15:37:01 +0800'
-categories: Architecture
+categories: architecture
 ---
 
 # 前端架构（Frontend Architecture）

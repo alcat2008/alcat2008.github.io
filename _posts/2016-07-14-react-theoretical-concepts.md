@@ -2,7 +2,7 @@
 layout: post
 title: React 设计思想
 date: '2016-07-14 16:00:00 +0800'
-categories: React
+categories: react
 ---
 
 # React 设计思想
