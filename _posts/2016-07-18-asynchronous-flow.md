@@ -11,7 +11,7 @@ categories: javascript
 
 js 流程控制的演进过程，狼叔已经形象的画了出来，贴在这里供大家参考。
 
-![fc_flowchart](resources/fc.png)
+![fc_flowchart](../resources/fc.png)
 
 ## Async/Await
 

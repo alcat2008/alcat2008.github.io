@@ -35,22 +35,22 @@
         color: $accent-color;
     }
     h1 {
-        font-size: 35px;
+        font-size: 38px;
     }
     h2 {
         font-size: 32px;
     }
     h3 {
-        font-size: 29px;
-    }
-    h4 {
         font-size: 26px;
     }
-    h5 {
+    h4 {
         font-size: 23px;
     }
-    h6 {
+    h5 {
         font-size: 20px;
+    }
+    h6 {
+        font-size: 16px;
     }
     p {
         font-size: 16px;
@@ -101,7 +101,7 @@
     blockquote {
         font-size: $base-font-size;
         padding: 0 15px;
-        margin: 0;
+        margin: 15px 0;
         color: #777;
         line-height: 1.8;
         border-left: 4px solid #ddd;
