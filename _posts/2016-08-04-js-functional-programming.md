@@ -14,12 +14,15 @@ Generally, the craft of programming is the factoring of a set of requirements in
 众所周知，在 JavaScript 中，函数是一等公民。
 
 ```
-A function encloses a set of statements. Functions are the fundamental modular unit of JavaScript. They are used for code reuse, information hiding, and composition. Functions are used to specify the behavior of objects.
+A function encloses a set of statements. Functions are the fundamental modular unit of JavaScript.
+They are used for code reuse, information hiding, and composition.
+Functions are used to specify the behavior of objects.
 ```
 
 函数就是对象，特殊之处在于它们可以被`调用`。
 
 JavaScript 中函数有4种调用模式，区别在于对关键参数 `this` 的初始化方式。
+
 - **method** invocation pattern
 - **function** invocation pattern
 - **constructor** invocation pattern
