@@ -15,7 +15,7 @@ categories: javascript
 
 所谓"构造函数"，其实就是一个普通函数，但是内部使用了` this 变量`。对构造函数使用 new 运算符，就能生成实例，并且 this 变量会绑定在实例对象上。
 
-使用构造函数生成的实例对象，会自动含有一个constructor属性，指向它们的构造函数。
+使用构造函数生成的实例对象，会自动含有一个 constructor 属性，指向它们的构造函数。
 
 Javascript 提供了一个 `instanceof` 运算符，验证原型对象与实例对象之间的关系。
 
@@ -30,3 +30,10 @@ Javascript 规定，每一个构造函数都有一个 prototype 属性，指向�
 由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype 对象就好像是实例对象的原型，而实例对象则好像"继承"了 prototype 对象一样。
 
 Javascript 继承机制的设计思想： `constructor + prototype`。
+
+### \__proto__
+
+一个对象的 \__proto__ 属性和内部属性 [[Prototype]] 指向一个相同的值 (`构造函数的 prototype 属性`)，原型的值可以是一个对象值也可以是 null (比如说 Object.prototype.\__proto__ 的值就是 null)。改变 \__proto__ 属性的值同时也会改变内部属性 [[Prototype]] 的值，除非该对象是不可扩展的。
+
+- 所有构造器/函数的 \__proto__ 都指向 Function.prototype，它是一个空函数（Empty function）
+- 所有对象的 \__proto__ 都指向其构造器的prototype
