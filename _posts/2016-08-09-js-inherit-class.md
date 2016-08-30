@@ -38,15 +38,84 @@ Javascript 继承机制的设计思想： `constructor + prototype`。
 - 所有构造器/函数的 \__proto__ 都指向 Function.prototype，它是一个空函数（Empty function）
 - 所有对象的 \__proto__ 都指向其构造器的 prototype
 
-## 继承方式
+### 继承方式
 
-思路：利用构造函数继承实例属性，利用原型链继承原型属性和方法。
+思路：**利用构造函数继承实例属性，利用原型链继承原型属性和方法**。
 
 ```javascript
-function inheritPrototype(Child, Parent) {
+function createSubPrototype(prototype) {
   var F = function(){};
-  F.prototype = Parent.prototype;
-  Child.prototype = new F();
-  Child.prototype.constructor = Child;
+  F.prototype = prototype;
+  return new F();
+}
+
+function Parent() {}
+function Child() {}
+
+Child.prototype = createSubPrototype(Parent.prototype);
+// 等价于下面的写法
+// Child.prototype = Object.create(Parent.prototype);
+Child.prototype.constructor = Child;
+
+var child = new Child()
+child instanceof Child   // true
+child instanceof Parent  // true
+
+```
+
+## 类 Class
+
+从 ECMAScript 6 开始，JavaScript 中有了类（class）这个概念。但需要注意的是，这并不是说：JavaScript 从此变得像其它基于类的面向对象语言一样，有了一种全新的继承模型。JavaScript 中的类只是 JavaScript 现有的、基于原型的继承模型的一种语法包装，它能让我们用更简洁明了的语法实现继承。
+
+ES6 并没有改变 JavaScript 基于原型的本质，只是在此之上提供了一些语法糖。class 就是其中之一，其它的还有 extends、super 和 static 。它们大多数都可以转换成等价的 ES5 语法。
+
+```javascript
+class Child extends Parent {
+  constructor(firstName, lastName, age) {
+    super(firstName, lastName)
+    this.age = age
+  }
 }
 ```
+
+以上 class 定义方式基本等价于：
+
+```javascript
+function Child(firstName, lastName, age) {
+  Parent.call(this, firstName, lastName)
+  this.age = age
+}
+
+Child.prototype = Object.create(Parent.prototype)
+Child.constructor = Child
+```
+
+ES6 中的类实际上就是个函数，而且正如函数的定义方式有函数声明和函数表达式两种一样，类的定义方式也有两种，分别是：类声明、类表达式。
+
+类声明和函数声明不同的一点是，函数声明存在变量提升现象，而类声明不会。也就是说，你必须先声明类，然后才能使用它，否则代码会抛出 ReferenceError 异常。
+
+- 类的数据类型就是函数，类本身就指向构造函数。
+- 类的所有方法都定义在类的 prototype 属性上。
+- 类的内部所有定义的方法，都是不可枚举的。
+- 类的属性名，可以采用表达式。
+
+### constructor
+
+constructor 方法是类的默认方法，通过 new 命令生成对象实例时，自动调用该方法。
+
+类的构造函数，不使用 new 是没法调用的，会报错。这是它跟普通构造函数的一个主要区别，后者不用 new 也可以执行。
+
+### Class 的继承
+
+Class 之间通过 `extends` 关键字实现继承，这比 ES5 的通过修改原型链实现继承，要清晰和方便很多。
+
+ES5 的继承，实质是先创造子类的实例对象 this，然后再将父类的方法添加到 this 上面（Parent.apply(this)）。ES6 的继承机制完全不同，实质是先创造父类的实例对象 this（所以必须先调用 super 方法），然后再用子类的构造函数修改 this。
+
+### 类的 prototype 属性和 \__proto__ 属性
+
+Class 作为构造函数的语法糖，同时有 prototype 属性和 \__proto__ 属性，因此同时存在两条继承链。
+
+- 子类的 \__proto__ 属性，表示构造函数的继承，总是指向父类。
+- 子类 prototype 属性的 \__proto__ 属性，表示方法的继承，总是指向父类的 prototype 属性。
+
+可以这样理解： 作为一个对象，子类的原型（\__proto__ 属性）是父类；作为一个构造函数，子类的原型（prototype 属性）是父类的实例。
