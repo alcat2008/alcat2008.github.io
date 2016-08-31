@@ -18,7 +18,8 @@ Generally, the craft of programming is the factoring of a set of requirements in
 众所周知，在 JavaScript 中，函数是一等公民。
 
 ```
-A function encloses a set of statements. Functions are the fundamental modular unit of JavaScript.
+A function encloses a set of statements.
+Functions are the fundamental modular unit of JavaScript.
 They are used for code reuse, information hiding, and composition.
 Functions are used to specify the behavior of objects.
 ```
@@ -128,6 +129,25 @@ ES6 中引入了箭头函数，和普通 function 函数相比，**箭头函数�
 ```
 
 箭头函数与非箭头函数间还有一个细微的区别，箭头函数不会获取它们自己的 arguments 对象。所以在 ES6 中，你可能更多地会使用不定参数和默认参数值这些新特性。
+
+## Curry & Thunk
+
+关于柯里化 Curry，请参考另一篇文章：[柯里化 Curry](/javascript/curry.html)
+
+至于 Thunk，个人认为是 Curry 的子集。在 JavaScript 语言中，Thunk 函数将多参数函数替换成单参数的版本，且 **只接受回调函数作为参数**。关于 Thunk 的详细介绍可参考文章 [Thunk 函数的含义和用法](http://www.ruanyifeng.com/blog/2015/05/thunk.html)。
+
+
+## Functional Programming 函数式编程
+
+"函数式编程"是一种"编程范式"（programming paradigm），也就是如何编写程序的方法论。它属于"结构化编程"的一种，主要思想是把运算过程尽量写成一系列嵌套的函数调用。
+
+函数式编程具有五个鲜明的特点：
+
+- 函数是"第一等公民"
+- 只用"表达式"，不用"语句"
+- 没有"副作用"
+- 不修改状态
+- 引用透明
 
 ## 延伸阅读
 

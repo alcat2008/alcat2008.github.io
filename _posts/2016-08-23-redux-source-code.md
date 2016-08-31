@@ -7,7 +7,7 @@ categories: architecture
 
 # Redux 源码分析
 
-Redux 的设计理念很简单，也很优雅，具体可参见我的学习笔记 [理解 Redux](http://front-ender.me/architecture/redux.html)。
+Redux 的设计理念很简单，也很优雅，具体可参见我的学习笔记 [理解 Redux](/architecture/redux.html)。
 
 本文试图对 Redux 源码进行解读，因水平有限，不当之处，敬请之处，不胜感激！源码中会省略一些无关代码，并用 `---` 进行注解。
 
