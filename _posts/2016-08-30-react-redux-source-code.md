@@ -411,6 +411,38 @@ export default function connect(mapStateToProps, mapDispatchToProps, mergeProps,
 }
 ```
 
+## shallowEqual(objA, objB)
+
+在 connect 的监听器事件中，使用 shallowEqual 来对比 state 是否有变化，所以理解其原理，有助于我们优化 state 结构，进而提升渲染性能。
+
+```javascript
+export default function shallowEqual(objA, objB) {
+  // --- 引用比较，所以若在 reducer 中返回相同的引用，将不会触发渲染
+  if (objA === objB) {
+    return true
+  }
+
+  // --- 遍历对象属性并对比
+  const keysA = Object.keys(objA)
+  const keysB = Object.keys(objB)
+
+  if (keysA.length !== keysB.length) {
+    return false
+  }
+
+  // Test for A's keys different from B.
+  const hasOwn = Object.prototype.hasOwnProperty
+  for (let i = 0; i < keysA.length; i++) {
+    if (!hasOwn.call(objB, keysA[i]) ||
+        objA[keysA[i]] !== objB[keysA[i]]) {
+      return false
+    }
+  }
+
+  return true
+}
+```
+
 ## 总结
 
 react-redux 最大的作用就是将 store 绑定到组件上，并在 state 更新时有选择的重新渲染。
