@@ -43,18 +43,21 @@ Javascript 继承机制的设计思想： `constructor + prototype`。
 思路：**利用构造函数继承实例属性，利用原型链继承原型属性和方法**。
 
 ```javascript
-function createSubPrototype(prototype) {
-  var F = function(){};
-  F.prototype = prototype;
-  return new F();
+function inherit(p) {
+  if (p == null) throw TypeError();  // p 是一个对象，但不能是 null
+  if (Object.create) return Object.create(p); // 若 Object.create 存在，则直接使用它
+
+  var t = typeof p;
+  if (t != "object" && t != "function") throw TypeError();
+  function F() {}; // 定义空构造函数
+  F.prototype = p; // 将其原型属性设置为 p
+  return new F(); // 使用 f() 创建 p 的继承对象
 }
 
 function Parent() {}
 function Child() {}
 
-Child.prototype = createSubPrototype(Parent.prototype);
-// 等价于下面的写法
-// Child.prototype = Object.create(Parent.prototype);
+Child.prototype = inherit(Parent.prototype);
 Child.prototype.constructor = Child;
 
 var child = new Child()
