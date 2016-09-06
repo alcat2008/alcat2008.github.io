@@ -9,7 +9,7 @@ categories: architecture
 
 Redux 的设计理念很简单，也很优雅，具体可参见我的学习笔记 [理解 Redux](/architecture/redux.html)。
 
-本文试图对 Redux 源码进行解读，因水平有限，不当之处，敬请之处，不胜感激！源码中会省略一些无关代码，并用 `---` 进行注解。
+本文试图对 Redux 源码进行解读，因水平有限，不当之处，敬请指出，不胜感激！源码中会省略一些无关代码，并用 `---` 进行注解。
 
 可以在 [Redux 官方 github](https://github.com/reactjs/redux/tree/master/src) 目录中直接查看到源码，结构很精简，除去 index.js 文件和 utils 目录（实际只有 warning.js 文件）外只包含 5 个文件，分别对应 5 个 API。
 

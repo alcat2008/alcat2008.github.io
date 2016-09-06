@@ -12,7 +12,7 @@ react-redux 是 Redux 官方提供的 React 绑定库，具有高效且灵活的
 
 关于 react-redux 的使用方法，请参考文章 [UsageWithReact](http://redux.js.org/docs/basics/UsageWithReact.html)，或者中文版 [搭配 React](http://cn.redux.js.org/docs/basics/UsageWithReact.html)。
 
-本文试图对 react-redux 源码进行解读，因水平有限，不当之处，敬请之处，不胜感激！源码中会省略一些无关代码，并用 `---` 进行注解。
+本文试图对 react-redux 源码进行解读，因水平有限，不当之处，敬请指出，不胜感激！源码中会省略一些无关代码，并用 `---` 进行注解。
 
 [react-redux 官方 github](https://github.com/reactjs/react-redux) 的源码目录结构如下，其核心是 Provider 和 connect 两个 API。
 

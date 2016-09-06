@@ -7,7 +7,7 @@ categories: react
 
 # React Transaction 机制
 
-React 实现中，大量使用了 Transaction。本文试图对 Transaction 机制进行解析，不当之处，敬请之处。
+React 实现中，大量使用了 Transaction。本文试图对 Transaction 机制进行解析，不当之处，敬请指出。
 
 ## Transaction 机制
 
