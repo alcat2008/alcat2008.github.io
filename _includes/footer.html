@@ -11,11 +11,13 @@
     <hr />
     <div class="user-footer">
         <div class="copyright alignable pull-left">
+          <a class="different-highlight" href="/about">
             {% if site.copyright %}
                 <h2> &copy; {{ site.copyright }}</h2>
             {% else %}
                 <h2> &copy; {{ site.title }}</h2>
             {% endif %}
+          </a>
         </div>
         <div class="alignable pull-right">
             <a target="_blank" class="icon icon-github" href="https://github.com/{{ site.github_username }}">
