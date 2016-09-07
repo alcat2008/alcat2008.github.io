@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 前端流行技术，拥抱还是抵制？
+keywords: 前端框架, 新技术, 态度
+description: 对新框架或者新技术应持的态度
 date: '2016-09-05 23:00:00 +0800'
-categories: event
+categories: essay
 ---
 
 # 前端新技术

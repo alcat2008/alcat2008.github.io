@@ -1,6 +1,8 @@
 ---
 layout: post
 title: JavaScript 函数编程
+keywords: javascript, function, 函数, functional, 函数式
+description: JavaScript 函数编程相关内容深入分析，包括作用域、箭头函数、函数式编程等
 date: '2016-08-04 08:00:00 +0800'
 categories: javascript
 ---

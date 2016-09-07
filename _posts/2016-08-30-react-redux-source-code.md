@@ -1,6 +1,8 @@
 ---
 layout: post
 title: react-redux 源码分析
+keywords: react-redux, analysis, 分析, 源码
+description: react-redux 源码分析解读
 date: '2016-08-30 08:00:00 +0800'
 categories: architecture
 ---
