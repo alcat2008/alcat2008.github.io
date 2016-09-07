@@ -7,6 +7,8 @@ date: '2016-09-09 09:00:00 +0800'
 categories: web
 ---
 
+Attention！！！ 文章翻译中，敬请期待。
+
 # 浏览器工作原理：现代 web 浏览器的幕后机制
 
 文章翻译自 [How Browsers Work: Behind the scenes of modern web browsers](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)，不当之处，敬请谅解。
