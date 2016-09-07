@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 浏览器工作原理：现代 web 浏览器的幕后机制
+keywords: 浏览器, 内部, 机制, 原理
+description: 介绍现代 web 浏览器的幕后机制
 date: '2016-09-09 09:00:00 +0800'
-categories: web, architecture
+categories: web
 ---
 
 # 浏览器工作原理：现代 web 浏览器的幕后机制

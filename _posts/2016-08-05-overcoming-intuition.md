@@ -1,9 +1,11 @@
 ---
 layout: post
-title: 克服编程中的潜意识 Overcoming Intuition in Programming
+title: 克服编程中的潜意识
 date: '2016-08-05 08:00:00 +0800'
 categories: cognition
 ---
+
+Attention！！！ 文章翻译中，敬请期待。
 
 翻译 [Overcoming Intuition in Programming](http://amasad.me/2016/01/03/overcoming-intuition-in-programming/)
 
