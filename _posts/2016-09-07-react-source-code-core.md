@@ -1,13 +1,13 @@
 ---
 layout: post
-title: React 源码概览
-keywords: react, 源码, 概览, overview
-description: React 源码概览
+title: React 源码概览一 （核心接口）
+keywords: react, 源码, 概览, overview, 核心
+description: React 源码概览一 （核心接口）
 date: '2016-09-07 11:00:00 +0800'
 categories: react
 ---
 
-# React 源码概览
+# React 源码概览一 （核心接口）
 
 本来想写 React 源码分析，但读过之后发现 React 源码太多。没有精力、也没有时间保证能一一细读，还是写一篇指引性文章较为合适，尽量帮助那些想深入了解 React 机制的人迅速理清其源码脉络，找到想阅读的内容。
 
@@ -21,7 +21,7 @@ categories: react
 
 ```javascript
 ├── addons/ // 插件
-├── isomorphic/ // 抽象层次较高的一些文件、接口或实现，可用于多种环境
+├── isomorphic/ // 抽象层次较高的一些文件、接口或实现，可用于多种环境。React 核心定义。
 ├── renderers/ // DOM、Native 等的渲染逻辑
 ├── shared/ // 共享的工具类
 ├── test/ // 测试
@@ -131,11 +131,34 @@ PureComponent 继承自 ReactComponent，只不过在更新时会对 props 和 s
 
 ### createElement, cloneElement, createFactory - ReactElement
 
-这三个接口是为了生成 ReactElement。
+这三个接口是为了生成 ReactElement。ReactElement 是个抽象的元素，可以对应 DOM 节点，也可以对应 Native 中的页面元素。
+
+```javascript
+var ReactElement = function(type, key, ref, self, source, owner, props) {
+  var element = {
+    // This tag allow us to uniquely identify this as a React Element
+    $$typeof: REACT_ELEMENT_TYPE,
+
+    // Built-in properties that belong on the element
+    type: type,
+    key: key,
+    ref: ref,
+    props: props,
+
+    // Record the component responsible for creating this element.
+    _owner: owner,
+  };
+  return element;
+};
+
+var REACT_ELEMENT_TYPE =
+  (typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element')) ||
+  0xeac7;
+```
 
 ### isValidElement - ReactElement.isValidElement
 
-校验是否是 ReactElement，应包含 Symbol 类型的属性 $$typeof。
+校验是否是 ReactElement，只需判断其 $$typeof 属性。
 
 ```javascript
 ReactElement.isValidElement = function(object) {
@@ -145,10 +168,6 @@ ReactElement.isValidElement = function(object) {
     object.$$typeof === REACT_ELEMENT_TYPE
   );
 };
-
-var REACT_ELEMENT_TYPE =
-  (typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element')) ||
-  0xeac7;
 ```
 
 ### PropTypes - ReactPropTypes
@@ -182,6 +201,13 @@ var ReactPropTypes = {
 根据指定对象，创建组件类。对象中应该至少包含 render 方法。
 
 ```javascript
+var SpecPolicy = keyMirror({
+  DEFINE_ONCE: null, // 仅定义一次
+  DEFINE_MANY: null, // 可以定义多次
+  OVERRIDE_BASE: null, // 重载基类
+  DEFINE_MANY_MERGED: null, // 可以定义多次，但期望有返回值。
+});
+
 var ReactClassInterface = {
   mixins: SpecPolicy.DEFINE_MANY,
   statics: SpecPolicy.DEFINE_MANY,
@@ -215,7 +241,6 @@ var ReactClassMixin = {
       this.updater.enqueueCallback(this, callback, 'replaceState');
     }
   },
-
   isMounted: function() {
     return this.updater.isMounted(this);
   },
@@ -272,20 +297,4 @@ var ReactClass = {
 
 根据支持的 HTML 标签创建 ReactDOMComponent 类的映射。
 
-
-## Virtual DOM
-
-JSX 是语法糖，但并不是 HTML 的语法糖，其转化后的形式如下：
-
-```javascript
-var Element = {
-  type: 'div',
-  props: {
-    className: css
-  },
-  childlren: []
-};
-```
-
-而这正对应着内存中所描述的 Virtual DOM。
-Virtual DOM 类似于一种缓存机制，大大提升了与 DOM 节点交互的效率。
+至此，React 的核心接口已经大体介绍完毕。发现东西比想象中的要多，所以决定还是分为多篇文章介绍，下一篇将介绍其渲染模块， [React 源码概览二 （渲染模块）](/react/react-source-code-render.html) 
