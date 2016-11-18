@@ -7,7 +7,7 @@ categories: test
 
 # 渗透测试
 
-渗透测试(`Penetration Testing` 或者 `Pen Testing`， `PT`)没有一个标准的定义。国外一些安全组织达成共识的通用说法是，渗透测试是通过模拟恶意黑客的攻击方法，来评估计算机网络系统安全的一种评估方法。这个过程包括对系统的任何弱点、技术缺陷或洞的主动分析，这个分析是从一个攻击者可能存在的位置来进行的，并且从这个位置有条件主动利用安全漏洞，达到一定的控制权限。
+渗透测试(`Penetration Testing` 或者 `Pen Testing`， `PT`)没有一个标准的定义。国外一些安全组织达成共识的通用说法是，渗透测试是通过模拟恶意黑客的攻击方法，来评估计算机网络系统安全的一种评估方法。这个过程包括对系统的任何弱点、技术缺陷或漏洞的主动分析，这个分析是从一个攻击者可能存在的位置来进行的，并且从这个位置有条件主动利用安全漏洞，达到一定的控制权限。
 
 渗透测试是一种合法且授权定位计算机系统，并对其成功实施漏洞攻击的方法，其目的是为了使这些受测系统更加安全。
 
@@ -20,38 +20,70 @@ categories: test
 - 渗透测试是一个渐进的且逐步深入的过程。
 - 渗透测试是选择不影响业务系统正常运行的攻击方法进行的测试。
 
+
 # 信息收集
+
+收集渗透目标的情报是最重要的阶段。如果收集到有用的情报资料的话，可以大大提高对渗透测试的成功性。收集渗透目标的情报一般是对目标系统的分析，扫描探测，服务查点，扫描对方漏洞，查找对方系统IP等，有时候渗透测试者也会用上“社会工程学”。渗透测试者会尽力搜集目标系统的配置与安全防御以及防火墙等等。
 
 ## 枚举服务
 
+枚举是一类程序，它允许用户从一个网络中收集某一类的所有相关信息。
+
+DNS枚举可以收集本地所有DNS服务和相关条目。DNS枚举可以帮助用户收集目标组织的关键信息，如用户名、计算机名和IP地址等。
+
 1. DNS枚举工具DNSenum
+
+dnsenum --enum baidu.com
+
 2. DNS枚举工具fierce
-3. SNMP枚举工具Snmpwalk
-4. SNMP枚举工具Snmpcheck
-5. SMTP枚举工具smtp-user-enum
+
+fierce -dns baidu.com
 
 ## 测试网络范围
 
-1. 域名查询工具DMitry
+测试网络范围内的IP地址或域名也是渗透测试的一个重要部分。通过测试网络范围内的IP地址或域名，确定是否有人入侵自己的网络中并损害系统。
+
+1. 域名查询工具DMitry 查询IP或域名WHOIS信息
 2. 跟踪路由工具Scapy
+
+$ scapy
+>>> res,unans=traceroute(["www.baidu.com"],dport=[80,443])
+>>> res.graph()
+
 
 ## 识别活跃的主机
 
-1. 网络映射器工具Nmap
+尝试渗透测试之前，必须先识别在这个目标网络内活跃的主机。
+
+1. 网络映射器工具Nmap 免费开放的网络扫描和嗅探工具包
+
+nmap -sP 192.168.64.60
 
 ## 查看打开的端口
+
+对一个大范围的网络或活跃的主机进行渗透测试，必须要了解这些主机上所打开的端口号。
 
 1. TCP端口扫描工具Nmap
 2. 图形化TCP端口扫描工具Zenmap
 
 ## 系统指纹识别
 
+系统指纹信息包括目标主机打开的端口、MAC地址、操作系统类型和内核版本等。
+
 1. 使用Nmap工具识别系统指纹信息
+
+nmap -O 192.168.64.60
+
 2. 指纹识别工具p0f
 
 ## 服务的指纹识别
 
+服务指纹信息包括服务端口、服务名和版本等。
+
 1. 使用Nmap工具识别服务指纹信息
+
+nmap -sV 192.168.64.60
+
 2. 服务枚举工具Amap
 
 ## 其他信息收集手段
@@ -81,6 +113,8 @@ OpenVAS（开放式漏洞评估系统）是一个客户端/服务器架构，它
 
 # 漏洞利用
 
+漏洞利用阶段利用已获得的信息和各种攻击手段实施渗透。网络应用程序漏洞诊断项目的加密通信漏洞诊断是必须执行的。顾名思义，利用漏洞，达到攻击的目的。
+
 漏洞利用是获得系统控制权限的重要途径。用户从目标系统中找到容易攻击的漏洞，然后利用该漏洞获取权限，从而实现对目标系统的控制。
 
 ## Metasploit
@@ -104,3 +138,64 @@ MSF命令行和MSF终端为Metasploit框架访问提供了两种截然不同的�
 ### Meterpreter
 
 Meterpreter是Metasploit框架中的一个杀手锏，通常作为利用漏洞后的攻击载荷所使用，攻击载荷在触发漏洞后能够返回给用户一个控制通道。当使用Armitage、MSFCLI或MSFCONSOLE获取到目标系统上的一个Meterpreter连接时，用户必须使用Meterpreter传递攻击载荷。MSFCONSOLE用于管理用户的会话，而Meterpreter则是攻击载荷和渗透攻击交互。
+
+
+
+# Kali Linux
+
+Kali Linux 是基于 Debian 的 Linux发行版，设计用于数字取证和渗透测试。
+
+Kali Linux 预装了许多渗透测试软件，包括nmap (端口扫描器)、Wireshark (数据包分析器)、John the Ripper (密码破解器),以及 Aircrack-ng (一应用于对无线局域网进行渗透测试的软件)
+
+[Kali Linux 工具集](https://www.hackfun.org/kali-tools/kali-tools-zh.html)
+
+
+# 渗透攻击Telnet服务
+
+（1）启动MSFCONSOLE。执行命令如下所示：
+
+```shell
+msfconsole
+```
+
+(2) 搜索所有有效的 Telnet 模块
+
+```shell
+search telnet
+```
+
+(3) 使用telnet_version模块进行渗透攻击
+
+```shell
+use auxiliary/scanner/telnet/telnet_version
+```
+
+(4) 并查看可配置的选项参数
+
+```shell
+show options
+```
+
+(5) 使用RHOSTS选项设置目标系统
+
+```shell
+set RHOSTS 192.168.64.60
+```
+
+(6) 启动扫描
+
+```shell
+exploit
+```
+
+(7) 登录目标主机的Telnet服务
+
+```shell
+telnet -l msfadmin 192.168.64.60
+```
+
+# Web 应用安全
+
+OWASP Top Ten Project
+
+[OWASP_Top_10_for_2013](https://www.owasp.org/index.php/Top10#OWASP_Top_10_for_2013)
