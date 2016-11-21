@@ -203,3 +203,5 @@ import App from './App'
 [使用 Mocha + Chai + Sinon 测试 React + Redux 的 web 应用](http://zhaozhiming.github.io/blog/2015/12/19/use-mocha-and-chai-and-sinon-to-test-react-and-redux-webapp/)
 
 [React 测试入门教程](http://www.ruanyifeng.com/blog/2016/02/react-testing-tutorial.html)
+
+[测试 Redux 应用中使用 window.fetch 的 API 请求](http://frantic1048.logdown.com/posts/517113-test-redux-application-windowfetch-api-request)
