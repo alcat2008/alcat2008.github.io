@@ -60,6 +60,20 @@ launchctl load –w /Library/LaunchDaemons/com.tenablesecurity.nessusd.plist
 launchctl unload –w /Library/LaunchDaemons/com.tenablesecurity.nessusd.plist
 ```
 
+Linux
+
+```
+// start
+service nessusd start
+或
+/etc/init.d/nessusd start
+
+// stop
+service nessusd stop
+或
+/etc/init.d/nessusd stop
+```
+
 Windows
 
 ```
