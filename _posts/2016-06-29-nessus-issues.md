@@ -31,7 +31,9 @@ Nessus号称是世界上最流行的漏洞扫描程序，全世界有超过75000
 
 安装也很简单，双击，一步一步就可以了。
 
-## 卸载 （`Mac`）
+## 卸载
+
+### Mac OS X
 
 删除下面的文件或者文件夹
 
@@ -48,9 +50,14 @@ Nessus号称是世界上最流行的漏洞扫描程序，全世界有超过75000
 sudo launchctl remove com.tenablesecurity.nessusd
 ```
 
+### Linux
+
+<https://docs.tenable.com/nessus/6_7/Content/remove/Unix_Uninstall.htm>
+
+
 ## 启动 & 关闭 （命令行）
 
-Mac OS X
+### Mac OS X
 
 ```
 // start
@@ -60,7 +67,7 @@ launchctl load –w /Library/LaunchDaemons/com.tenablesecurity.nessusd.plist
 launchctl unload –w /Library/LaunchDaemons/com.tenablesecurity.nessusd.plist
 ```
 
-Linux
+### Linux
 
 ```
 // start
@@ -74,7 +81,7 @@ service nessusd stop
 /etc/init.d/nessusd stop
 ```
 
-Windows
+### Windows
 
 ```
 // start
