@@ -13,8 +13,8 @@ categories: react
 
 在构建 React 组件时，一个较为常见的场景是需要通过 props 计算得到某些渲染数据，实现方式无外乎以下两种：
 
--（一） 在 constructor 中对 props 进行处理，用 state 承载最终的渲染数据。
--（二） 直接在 render 中计算并使用计算结果进行渲染。
+- 方法一：在 constructor 中对 props 进行处理，用 state 承载最终的渲染数据。
+- 方法二：直接在 render 中计算并使用计算结果进行渲染。
 
 两种方式各有优劣：
 
@@ -111,5 +111,5 @@ class App extends Component {
 
 ## 参考资料
 
-[how to reload a route?](https://github.com/ReactTraining/react-router/issues/1982)
-[React 实践心得：key 属性的原理和用法](http://taobaofed.org/blog/2016/08/24/react-key/)
+- [how to reload a route?](https://github.com/ReactTraining/react-router/issues/1982)
+- [React 实践心得：key 属性的原理和用法](http://taobaofed.org/blog/2016/08/24/react-key/)
