@@ -11,7 +11,7 @@ categories: react
 
 ## 有状态组件
 
-在构建 React 组件时，一个较为常见的场景是需要通过 props 计算得到某些渲染数据，实现方式无外乎以下两种：
+在构建 React 组件时，一种较为常见的场景是需要通过 props 计算得到某些渲染数据，实现方式无外乎以下两种：
 
 - 方法一：在 constructor 中对 props 进行处理，用 state 承载最终的渲染数据。
 - 方法二：直接在 render 中计算并使用计算结果进行渲染。
@@ -21,7 +21,7 @@ categories: react
 - 方法一在实现时往往需要配合 componentWillReceiveProps 一起使用，为何？一旦用于计算的 props 发生变化，那么就需要对 state 同步更新；
 - 方法二每次 render 都需要计算一次，无法忽视其对性能的影响。
 
-下面顺着这个思路思考下去，究竟如何构建一个复杂的有状态组件？网上已经有太多的最佳实践，都各有千秋，这里不再赘述。在我看来，组件的设计其实就是一种权衡，其首要考虑是模块分解的合理性、代码的可维护性。
+下面顺着这个思路思考下去，究竟如何构建一个复杂的有状态组件？网上已经有太多的最佳实践，都各有千秋，这里不再赘述。在我看来，组件的设计其实就是一种 **权衡**，其首要考虑是模块分解的合理性、代码的可维护性。
 
 这里强调一点，在React 组件中，一旦需要在 componentWillReceiveProps 中进行某些 setState 的操作，那么首先应当考虑 props 或者 state 是否需要重新设计。因为在设计良好的 React 组件中，**props 与 state 所包含的信息应是正交的关系**。
 
@@ -69,7 +69,7 @@ updateChildren: function(prevChildren, nextChildren, ...) {
   },
 ```
 
-所以当 key 变化时会删除 prevChild， 并新建 nextChild。所以通过 key 属性，能在合适的时候触发组件的销毁与重建。
+当 key 变化时会删除 prevChild， 并新建 nextChild。所以通过 key 属性，能在合适的时候触发组件的销毁与重建。
 
 
 ## react-router
