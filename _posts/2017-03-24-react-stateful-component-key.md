@@ -104,6 +104,48 @@ class App extends Component {
 }
 ```
 
+## 为组件添加 key 属性的方法
+
+上面给 route 组件上加 key 属性的方法会在每次变更时都执行 createElement 方法，侵入性太强。如果你不喜欢，那么现在介绍一种更为通用的在组件上添加 key 属性的方法。
+
+如果组件的写法为
+
+```javascript
+export default class Demo extends React.Component {}
+```
+
+那么可以利用如下方式添加 key 属性
+
+```javascript
+class Demo extends React.Component {}
+
+export default function (props) {
+  return (<Demo {...props} key={...} />);
+}
+```
+
+如果是连接了 Redux 的组件怎么办呢，比如：
+
+```javascript
+class Demo extends React.Component {}
+
+export default connect()(Demo);
+```
+
+修改方式也很简单
+
+```javascript
+class Demo extends React.Component {}
+
+const FinalDemo = connect()(Demo);
+export default function (props) {
+  return (<FinalDemo {...props} key={...} />);
+}
+```
+
+以上介绍的为组件添加 key 属性的方法更为简单，而且将变化收敛于组件内部。同时，也可以用此种方法为组件添加其他属性，比如：url，是不是立马联想到更为广阔的适用场景了，特别是结合一些 Decorator 进行组合时，这种方法的好处就更大了。如果你有类似的组件化方式，欢迎发信息交流！
+
+
 ## 结语
 
 虽然 key 属性有这么大能量，但还是不能滥用，需要权衡，毕竟重建是一个比较消耗资源的行为。本文只不过是提供一种解决问题的思路，完美的解决方案还是需要在设计时对逻辑进行隔离，从源头上避免一些反模式，做到真正的组件化。
