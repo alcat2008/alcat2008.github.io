@@ -143,8 +143,22 @@ export default function (props) {
 }
 ```
 
-以上介绍的为组件添加 key 属性的方法更为简单，而且将变化收敛于组件内部。同时，也可以用此种方法为组件添加其他属性，比如：url，是不是立马联想到更为广阔的适用场景了，特别是结合一些 Decorator 进行组合时，这种方法的好处就更大了。如果你有类似的组件化方式，欢迎发信息交流！
+以上介绍的为组件添加 key 属性的方法更为简单，而且将变化收敛于组件内部。
 
+同时，举一反三，也可以用此种方法为组件添加其他属性，比如：url，是不是立马联想到更为广阔的适用场景了，其实我一般都是这样用的。
+
+```javascript
+class Demo extends React.Component {}
+
+const FinalDemo = connect()(compose(AsyncDecorator)(Demo));
+export default function (props) {
+  return (<FinalDemo {...props} url={...} />);
+}
+```
+
+利用函数式编程的思想，通过 compose 结合 Decorator，实现了组合式的组件化开发方法，真正做到了单一职责，代码结构变得更为清晰。
+
+如果你有类似的组件化方式，欢迎发信息交流！
 
 ## 结语
 
@@ -155,3 +169,4 @@ export default function (props) {
 
 - [how to reload a route?](https://github.com/ReactTraining/react-router/issues/1982)
 - [React 实践心得：key 属性的原理和用法](http://taobaofed.org/blog/2016/08/24/react-key/)
+- [基于 Decorator 的组件扩展实践](https://zhuanlan.zhihu.com/p/22054582)
