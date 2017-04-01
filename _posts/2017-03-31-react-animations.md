@@ -3,7 +3,9 @@ layout: post
 title: CSS 动画及其在 React 中的应用
 keywords: react, css, animation, transition, transform, ReactCSSTransitionGroup, react-addons-css-transition-group, Animate.css
 description: CSS 动画及其在 React 中的应用
-date: '2017-03-31 18:00:00 +0800'
+date: 2017-03-31
+excerpt: "Examples and code for displaying images in posts."
+tags: [react, css, animation]
 categories: react
 ---
 

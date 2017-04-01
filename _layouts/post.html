@@ -1,24 +1,44 @@
 ---
-layout: default
+layout: compress
 ---
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include nav.html %}
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="wrapper animated fadeIn">
+            <div class="content">
+                <div class="post-title {% if page.feature %} feature {% endif %}">
+                    <h1>{{ page.title }}</h1>
+                    <h4>{{ page.date | date_to_string }}</h4>
+                    {% if site.reading_time %}
+                    <p class="reading-time">
+                      <i class="fa fa-clock-o"></i>
+                      {% include read-time.html %}
+                    </p><!-- /.entry-reading-time -->
+                    {% endif %}
+                </div>
+                {{ content }}
 
-<div class="content container">
-    <div class="post-date">
-        <time>{{ page.date | date: '%B %d, %Y '}}</time>
-    </div>
-    <h1 class="post-title">{{ page.title }}</h1>
-    {{ content }}
-</div>
-<div class="container">
-    {% include share.html %}
-</div>
-
-{% if site.about_footer %}
-    {% include about.html %}
-{% endif %}
-
-{% if site.facebook_comments %}
-    {% include fb_comments.html %}
-{% endif %}
-
-{% include disqus.html %}
+                {% if site.about_footer %}
+                {% include about.html %}
+                {% endif %}
+                {% include suggestion.html %}
+            </div>
+        </div>
+        {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
+    </header>
+    {% include scripts.html %}
+    {% if site.mathjax == true %}
+    <!-- MathJax -->
+    <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% endif %}
+</body>
+</html>
