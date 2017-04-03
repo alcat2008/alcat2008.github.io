@@ -1,8 +1,6 @@
 ---
 layout: page
-title: front-ender.me
-tags: [about, front-ender, alcat2008]
-date: 2016-03-21
+title: 关于
 comments: false
 ---
     
