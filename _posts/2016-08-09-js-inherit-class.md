@@ -4,6 +4,7 @@ title: JavaScript 继承和类
 keywords: javascript, inherit, class, 继承, 类, prototype
 description: JavaScript 继承机制详解，类的继承方式
 date: '2016-08-09 08:00:00 +0800'
+tags: [javascript]
 categories: javascript
 ---
 

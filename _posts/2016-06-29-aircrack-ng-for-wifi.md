@@ -2,6 +2,7 @@
 layout: post
 title: aircrack-ng 对 wifi 渗透测试
 date: '2016-06-29 23:37:01 +0800'
+tags: [PT]
 categories: test
 ---
 

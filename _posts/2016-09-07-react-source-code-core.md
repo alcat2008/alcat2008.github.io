@@ -4,6 +4,7 @@ title: React 源码概览一 （核心接口）
 keywords: react, 源码, 概览, overview, 核心
 description: React 源码概览一 （核心接口）
 date: '2016-09-07 11:00:00 +0800'
+tags: [react]
 categories: react
 ---
 
@@ -297,4 +298,4 @@ var ReactClass = {
 
 根据支持的 HTML 标签创建 ReactDOMComponent 类的映射。
 
-至此，React 的核心接口已经大体介绍完毕。发现东西比想象中的要多，所以决定还是分为多篇文章介绍，下一篇将介绍其渲染模块， [React 源码概览二 （渲染模块）](/react/react-source-code-render.html) 
+至此，React 的核心接口已经大体介绍完毕。发现东西比想象中的要多，所以决定还是分为多篇文章介绍，下一篇将介绍其渲染模块， [React 源码概览二 （渲染模块）](/react/react-source-code-render.html)

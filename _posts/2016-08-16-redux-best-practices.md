@@ -2,6 +2,7 @@
 layout: post
 title: Redux 最佳实践
 date: '2016-08-16 08:00:00 +0800'
+tags: [redux]
 categories: architecture
 ---
 

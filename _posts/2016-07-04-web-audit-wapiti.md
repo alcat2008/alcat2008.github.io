@@ -2,6 +2,7 @@
 layout: post
 title: Web 漏洞检查 — Wapiti
 date: '2016-07-04 08:00:00 +0800'
+tags: [PT]
 categories: test
 ---
 

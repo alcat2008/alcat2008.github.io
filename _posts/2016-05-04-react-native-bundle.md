@@ -2,6 +2,7 @@
 layout: post
 title: React Native 项目打包
 date: '2016-05-04 15:37:01 +0800'
+tags: [react-native]
 categories: react-native
 ---
 

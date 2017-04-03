@@ -4,6 +4,7 @@ title: github 与 npm 合作神器之 .npmignore
 keywords: .npmignore, github, npm
 description: 什么是 .npmignore ？ 以及其在 github 与 npm 之间所扮演的角色。
 date: '2016-09-20 11:00:00 +0800'
+tags: [architecture]
 categories: architecture
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: SQL 注入 — sqlmap
 date: '2016-07-01 08:00:00 +0800'
+tags: [PT]
 categories: test
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: JavaScript 判等你真的清楚吗？
 date: '2016-07-19 08:00:00 +0800'
+tags: [javascript]
 categories: javascript
 ---
 
