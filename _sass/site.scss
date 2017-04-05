@@ -72,6 +72,7 @@ body {
 .container {
 	width: 36rem;
 	max-width: 550px;
+	margin-top: 32px;
 	padding-right: 15px;
 	padding-left: 15px;
 	@include center-block();

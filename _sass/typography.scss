@@ -10,6 +10,10 @@
 	@media #{$small} {
 		padding: 0 .5em;
 	}
+
+  h2 {
+    border-bottom: 1px solid #eaecef;
+  }
 }
 
 // titles
@@ -126,6 +130,7 @@ li .highlight code,
 li .highlight pre {
     background-color: transparent;
     border: 0;
+		padding: 0;
 }
 
 // table

@@ -69,6 +69,10 @@ hr {
     font-weight: normal;;
     @media (max-width: $break-small) {
     }
+
+    h2 {
+      margin: 12px auto;
+    }
 }
 .page-suggestion {
   margin-top: $base-spacing;
