@@ -13,8 +13,8 @@ categories: architecture
 ## 1. 在 VSCode 中打开一个 Electron 工程。
 
 ```bash
-$ git clone https://github.com/alcat2008/electron-react-boilerplate.git
-$ code electron-react-boilerplate
+$ git clone https://github.com/alcat2008/electron-react-starter.git
+$ code electron-react-starter
 ```
 
 ## 2. 添加一个文件 `.vscode/launch.json` 并使用一下配置：
