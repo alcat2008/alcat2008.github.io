@@ -236,11 +236,6 @@ $delayTime: 3;
 	@return ($min + random($max));
 }
 
-body {
-    background: #000;
-    overflow: hidden;
-}
-
 :root {
     --fireWidth: 115px;
     --fireHeight: 200px;
