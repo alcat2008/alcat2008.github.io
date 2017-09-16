@@ -65,14 +65,14 @@ body {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	-webkit-box-align: center;
-	-webkit-align-items: center;
+	-webkit-align-items: flex-start;
 	-ms-flex-align: center;
-	align-items: center;
+	align-items: flex-start;
 }
 .container {
 	width: 36rem;
 	max-width: 550px;
-	margin-top: 32px;
+	margin-top: 320px;
 	padding-right: 15px;
 	padding-left: 15px;
 	@include center-block();
@@ -96,6 +96,12 @@ body {
 	.title {
 	    margin-top: 0;
 	    margin-bottom: 5px;
+	}
+	.main-title {
+		padding-top: 1rem;
+		p {
+			font-size: 2rem;
+		}
 	}
 	@media #{$small} {
 		padding: 0 1em;
@@ -219,5 +225,77 @@ header .entry-meta {
         background-color: rgba($black, 0.6);
         background-blend-mode: multiply;
         background-position: center center;
+    }
+}
+
+$douCount: 40;
+$animationTime: 2;
+$delayTime: 3;
+
+@function randomNum($max, $min: 0) {
+	@return ($min + random($max));
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+}
+
+:root {
+    --fireWidth: 115px;
+    --fireHeight: 200px;
+    --dotSize: 24px;
+    --fireColor: #b5932f;
+    // --fireColor: #008eff;
+    // --fireColor: #ff9900;
+
+}
+
+.user-header {}
+
+.g-container {
+    position: relative;
+    // width: 384px;
+    // height: 300px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.g-fire {
+    position: absolute;
+    // width: 0;
+    // height: 0;
+    bottom: 100px;
+    left: 50%;
+    border-radius: 45%;
+    box-sizing: border-box;
+    border: 200px solid #000;
+    border-bottom: 200px solid transparent;
+    transform: translate(-50%, 0) scaleX(.4);
+    background-color: var(--fireColor);
+    filter: blur(20px) contrast(30);
+}
+
+.g-dot {
+    position: absolute;
+    bottom: -210px;
+    left: 0;
+    width: var(--dotSize);
+    height: var(--dotSize);
+    background: #000;
+    border-radius: 50%;
+}
+
+@for $i from 1 to $douCount + 1 {
+    .g-dot:nth-child(#{$i}) {
+        bottom: -#{randomNum(120, 240)}px;
+        left: #{randomNum(300, -160)}px;
+        animation: move #{randomNum($animationTime * 13, 7) / 10}s infinite #{randomNum($delayTime * 20) / 10}s linear;
+    }
+}
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, -350px, 0);
     }
 }
