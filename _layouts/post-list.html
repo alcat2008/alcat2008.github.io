@@ -13,7 +13,7 @@ layout: compress
     {% include nav.html %}
     <!-- Header -->
     <header class="header" role="banner">
-        <div class="wrapper animated fadeIn">
+        <div class="wrapper">
             <div class="content">
                 <div class="post-title">
                     <h1>{{ page.title }}</h1>
@@ -25,7 +25,7 @@ layout: compress
                     {% for post in site.posts %}
                         {% if post.project == null %}
                     <ul>
-                        <li class="wow fadeInUp" data-wow-duration="1.5s">
+                        <li class="wow" data-wow-duration="1.5s">
                             <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                         </li>
                     </ul>
