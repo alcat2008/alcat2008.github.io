@@ -45,7 +45,7 @@ reading_time:       true
 words_per_minute:   200
 
 logo:               'images/fire.jpg'
-background:         'assets/img/placeholder-big.jpg'
+background:         'assets/img/bg.webp'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 
