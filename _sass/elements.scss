@@ -107,7 +107,7 @@ hr {
 // images and figures
 img {
     display: block;
-	max-width: 100%;
+	  max-width: 100%;
     width: auto;
     height: auto;
     vertical-align: middle;
@@ -123,8 +123,16 @@ img {
 	height: 150px;
 	width: 150px;
 }
+.author-link:after {
+    display: none;
+}
 .author-photo {
     background-color: $white;
+    border-radius: 50%;
+    margin: 15px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 70%;
 }
 .image-right {
     float: right;
@@ -168,7 +176,7 @@ figure {
   }
 }
 svg:not(:root) {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 // keyboard tag

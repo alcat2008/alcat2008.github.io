@@ -95,7 +95,7 @@ body {
 	text-align: center;
 	.title {
 	    margin-top: 0;
-	    margin-bottom: 5px;
+	    margin-bottom: 15px;
 	}
 	.main-title {
 		padding-top: 1rem;
@@ -293,4 +293,8 @@ $delayTime: 3;
     100% {
         transform: translate3d(0, -350px, 0);
     }
+}
+
+.wechat_img {
+  width: 50%;
 }

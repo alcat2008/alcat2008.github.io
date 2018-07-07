@@ -1,9 +1,20 @@
     <meta charset="UTF-8">
+    <link rel="dns-prefetch" href="//cdn.bootcss.com">
+    <meta name="renderer" content="webkit">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
     <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+
+    <!-- preload JS -->
+    <link rel="preload" href="//cdn.bootcss.com/jquery/1.12.0/jquery.min.js" as="script"/>
+    <link rel="preload" href="{{ site.url }}/assets/js/jquery.dlmenu.min.js" as="script"/>
+    <link rel="preload" href="{{ site.url }}/assets/js/jquery.goup.min.js" as="script"/>
+    <link rel="preload" href="{{ site.url }}/assets/js/jquery.magnific-popup.min.js" as="script"/>
+    <link rel="preload" href="{{ site.url }}/assets/js/jquery.fitvid.min.js" as="script"/>
+    <link rel="preload" href="{{ site.url }}/assets/js/scripts.js" as="script"/>
+
     <!-- Twitter Cards -->
     {% if page.feature %}{% capture feature %}{{ page.feature }}{% endcapture %}{% unless feature contains 'http://' or feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
     <meta name="twitter:card" content="summary_large_image">
@@ -32,7 +43,7 @@
     <!-- Handheld -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS -->
     <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
     <!-- JS -->

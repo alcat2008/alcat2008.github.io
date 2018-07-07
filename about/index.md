@@ -21,4 +21,4 @@ E-mail: [ge_yangyang@126.com](mailto:ge_yangyang@126.com)
 
 QQ: 80397747
 
-微信： ![wechat](../images/wechat.jpeg)
+微信： ![wechat](../images/wechat.jpeg){: .wechat_img}

@@ -69,7 +69,7 @@ class AnimationDemo extends React.Component {
         transitionLeaveTimeout={500}
         transitionName={{
           enter: 'fadeInUp',
-          leave: 'fadeOut',
+          leave: 'fadeOut'
         }}
       >
         {childrenComponent}
@@ -107,7 +107,7 @@ class AnimationDemo extends React.Component {
     transitionLeaveTimeout={500}
     transitionName={{
       enter: 'fadeInUp',
-      leave: 'fadeOut',
+      leave: 'fadeOut'
     }}
   >
     {datalist.map(item => (
