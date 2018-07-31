@@ -58,8 +58,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class AnimationDemo extends React.Component {
   render() {
     const childrenComponent = (
-        <div key={...} className="animated">我是动画</div>
-      );
+      <div key={...} className="animated">我是动画</div>
+    );
 
     return (
       <ReactCSSTransitionGroup
