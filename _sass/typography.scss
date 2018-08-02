@@ -72,16 +72,15 @@ h3.title a {
 
 // quotes
 blockquote {
-	font-family:$alt-font;
-	font-style:italic;
-	border-left:8px solid $color_tundora;
-	padding-left:20px;
-	margin: 0;
-}
-@media only screen and (min-width: 48em) {
-	blockquote {
-		margin-left:-28px
-	}
+	// font-family:$alt-font;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	// border-left:8px solid $color_tundora;
+  border-left: 5px solid #15F3A8;
+  margin: 0;
+  padding-left: 1.1rem;
+  // margin-left: 1.2rem;
+  font-style: italic;
+  color: #ada8a8;
 }
 
 // figcaption
