@@ -21,7 +21,7 @@ layout: compress
                         <i class="dx_icon dx_icon-home"></i>
                     </a>
                     <a class="btn zoombtn" href="/tags">
-                        <i class="dx_icon dx_icon-tag"></i>
+                        <i class="dx_icon dx_icon-tags-o"></i>
                     </a>
                 </div>
                 <div class="post-list">
@@ -29,7 +29,15 @@ layout: compress
                         {% if post.project == null %}
                     <ul>
                         <li class="wow" data-wow-duration="1.5s">
-                            <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                            <a class="zoombtn" href="{{ site.url }}{{ post.url }}">
+                              {{ post.title }}
+                              {% for tag in post.tags %}
+                                <span class="atag">
+                                  <i class="dx_icon dx_icon-tag"></i>
+                                  {{ tag }}
+                                </span>
+                              {% endfor %}
+                            </a>
                         </li>
                     </ul>
                         {% endif %}

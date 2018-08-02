@@ -1,5 +1,10 @@
-<div class="container">
-    <hr />
+{% if page.author_site %}
+{% assign author_site = page.author_site %}
+{% else %}
+{% assign author_site = "../about" %}
+{% endif %}
+
+<a class="container about-container" href="{{ author_site }}">
     {% if site.about_footer %}
         {% if page.profile_picture %}
             {% assign profile_picture = page.profile_picture %}
@@ -15,12 +20,8 @@
             </div>
         {% endif %}
         <div class="about-stub">
-            {% if page.author_site %}
-                {% assign author_site = page.author_site %}
-            {% else %}
-                {% assign author_site = "../about" %}
-            {% endif %}
-            <a class="different-highlight" href="{{ author_site }}">
+
+            <div class="different-highlight">
                 <h2 style="font-family: Montserrat">
                     {% if page.author %}
                         {{ page.author }}
@@ -28,7 +29,7 @@
                         {{ site.author }}
                     {% endif %}
                 </h2>
-            </a>
+            </div>
             {% if page.about_stub %}
                 <p id="about-description" style="margin-top: 4px;">
                     {{ page.about_stub }}
@@ -40,5 +41,5 @@
             {% endif %}
         </div>
     {% endif %}
-</div>
+</a>
 <div style="clear:both"></div>

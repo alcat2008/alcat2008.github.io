@@ -27,6 +27,17 @@ layout: compress
                 </div>
                 {{ content }}
 
+                <div style="text-align: right;">
+                    {% for tag in page.tags %}
+                      <a class="tag-href" href="{{ site.url }}/tags#{{ tag }}">
+                        <span class="atag">
+                          <i class="dx_icon dx_icon-tag"></i>
+                          {{ tag }}
+                        </span>
+                      </a>
+                    {% endfor %}
+                </div>
+
                 {% if site.about_footer %}
                 {% include about.html %}
                 {% endif %}

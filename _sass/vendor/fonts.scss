@@ -379,5 +379,17 @@
 .dx_icon-instagram:before { content: "\e70b"; }
 .dx_icon-yuque:before { content: "\e70c"; }
 
-.pull-right { float: right; }
-.pull-left { float: left; }
+.pull-right {
+  float: right;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  line-height: 1.25;
+  margin-right: -15px;
+}
+.pull-left {
+  float: left;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  line-height: 1.25;
+  margin-left: -15px;
+}
