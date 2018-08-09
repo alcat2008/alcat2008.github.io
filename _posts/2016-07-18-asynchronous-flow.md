@@ -8,7 +8,7 @@ categories: javascript
 
 # JavaScript 异步编程思考
 
-之前在 "前端之巅" 微信群中全程观看了 狼叔 分享的 ["深入浅出js（Node.js）异步流程控制"](https://github.com/i5ting/asynchronous-flow-control/blob/master/31.md)，把 js 异步流程控制的知识又回顾了下，感觉自己理解还有欠缺。趁此机会，又好好的研究了下，把之前的缺失补上来。
+之前在 "前端之巅" 微信群中全程观看了 ["深入浅出js（Node.js）异步流程控制"](https://github.com/i5ting/asynchronous-flow-control/blob/master/31.md) 的分享，把 js 异步流程控制的知识又回顾了下，感觉自己理解还有欠缺。趁此机会，又好好的研究了下，把之前的缺失补上来。
 
 js 流程控制的演进过程，狼叔已经形象的画了出来，贴在这里供大家参考。
 
