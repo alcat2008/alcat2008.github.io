@@ -12,7 +12,8 @@ React Native 开发的 APP，首次安装完成后在安装界面直接"打开"�
 
 # 参考
 
-<http://blog.csdn.net/love100628/article/details/43238135> <http://stackoverflow.com/questions/3042420/home-key-press-behaviour/4782423>
+- <http://blog.csdn.net/love100628/article/details/43238135>
+- <http://stackoverflow.com/questions/3042420/home-key-press-behaviour/4782423>
 
 # 解决方案
 
