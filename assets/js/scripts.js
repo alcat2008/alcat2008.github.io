@@ -8,7 +8,8 @@ $(function() {
 window.onunload = function() {};
 
 // Add lightbox class to all image links
-$("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
+$("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.svg'],a[href$='.webp'],a[href$='.gif']").addClass("image-popup");
+// $("img[src$='.jpg'],img[src$='.jpeg'],img[src$='.JPG'],img[src$='.png'],img[src$='.svg'],img[src$='.gif']").addClass("image-popup");
 
 // FitVids options
 $(function() {
@@ -50,7 +51,7 @@ $(document).ready(function() {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
     },
     removalDelay: 300, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open. 
+    // Class that is added to body when popup is open.
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-fade'
   });

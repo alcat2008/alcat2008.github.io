@@ -98,6 +98,9 @@ sass:
 #facebook:           username
 github-url:         alcat2008
 
+# Plugins
+plugins: [jekyll-paginate]
+
 # Gems
 gems:
   - jekyll-mentions
