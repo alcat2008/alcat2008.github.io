@@ -4,7 +4,7 @@ title: 论前端的 “模块化” 与 “组件化”
 keywords: module, component, 模块化, 组件化
 description:
 date: '2016-11-08 11:00:00 +0800'
-tags: [architecture]
+tags: [Architecture]
 categories: architecture
 ---
 

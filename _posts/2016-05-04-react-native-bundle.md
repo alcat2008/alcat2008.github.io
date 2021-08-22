@@ -2,7 +2,7 @@
 layout: post
 title: React Native 项目打包
 date: '2016-05-04 15:37:01 +0800'
-tags: [react-native]
+tags: [React Native]
 categories: react-native
 ---
 
@@ -49,14 +49,14 @@ react-native bundle --platform android --dev false --entry-file index.android.js
 ```javascript
 Options:
   --entry-file        Path to the root JS file, either absolute or relative to JS root                                   [required]
-  --platform          Either "ios" or "android"                                                                        
+  --platform          Either "ios" or "android"
   --transformer       Specify a custom transformer to be used (absolute path)                                            [default: "./node_modules/react-native/packager/transformer.js"]
   --dev               If false, warnings are disabled and the bundle is minified                                         [default: true]
   --prepack           If true, the output bundle will use the Prepack format.                                            [default: false]
   --bridge-config     File name of a a JSON export of __fbBatchedBridgeConfig. Used by Prepack. Ex. ./bridgeconfig.json
   --bundle-output     File name where to store the resulting bundle, ex. /tmp/groups.bundle                              [required]
   --bundle-encoding   Encoding the bundle should be written in (https://nodejs.org/api/buffer.html#buffer_buffer).       [default: "utf8"]
-  --sourcemap-output  File name where to store the sourcemap file for resulting bundle, ex. /tmp/groups.map            
-  --assets-dest       Directory name where to store assets referenced in the bundle                                    
+  --sourcemap-output  File name where to store the sourcemap file for resulting bundle, ex. /tmp/groups.map
+  --assets-dest       Directory name where to store assets referenced in the bundle
   --verbose           Enables logging                                                                                    [default: false]
 ```

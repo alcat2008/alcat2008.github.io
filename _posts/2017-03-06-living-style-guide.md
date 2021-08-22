@@ -4,7 +4,7 @@ title: Living style guide
 keywords: Living style guide, UI libraries
 description: Living style guide
 date: '2017-03-06 09:00:00 +0800'
-tags: [architecture]
+tags: [Architecture]
 categories: architecture
 ---
 

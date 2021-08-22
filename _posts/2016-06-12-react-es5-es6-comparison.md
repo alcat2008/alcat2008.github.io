@@ -2,7 +2,7 @@
 layout: post
 title: React & React Native的ES5 ES6写法对照
 date: '2016-06-12 15:37:01 +0800'
-tags: [react, react-native]
+tags: [React, React Native]
 categories: javascript
 ---
 

@@ -16,7 +16,7 @@ author: alcat2008
 description: 前端路漫漫，行知方知行
 
 # This will what will show against &copy; in the footer
-copyright: front-ender.me
+copyright: front-end.life
 
 # Toggle your short bio, which will displayed on your index page
 # Just toggle it and run jekyll again to see
@@ -25,7 +25,7 @@ intro: false
 # Tip: Remove the span from site_heading if intro is set to true
 # This will be displayed in your intro
 short_bio: >
-  Welcome! This is <span>front-ender.me</span>, a drawing space.
+  Welcome! This is <span>front-end.life</span>, a drawing space.
 
 bio: '前端路漫漫，行知方知行'
 

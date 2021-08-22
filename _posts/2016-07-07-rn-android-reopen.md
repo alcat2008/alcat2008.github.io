@@ -2,7 +2,7 @@
 layout: post
 title: RN 应用 Android 版本首次安装后重新加载的问题
 date: '2016-07-07 10:00:00 +0800'
-tags: [react-native]
+tags: [React Native]
 categories: react-native
 ---
 

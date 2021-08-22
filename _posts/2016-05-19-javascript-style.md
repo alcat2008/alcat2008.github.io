@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript 编码规范
 date: '2016-05-19 15:37:01 +0800'
-tags: [javascript]
+tags: [JavaScript]
 categories: javascript
 ---
 

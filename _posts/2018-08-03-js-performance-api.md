@@ -2,7 +2,7 @@
 layout: post
 title: requestAnimationFrame 与 requestIdleCallback
 date: '2018-08-03 08:00:00 +0800'
-tags: [javascript]
+tags: [JavaScript]
 categories: javascript
 ---
 
@@ -114,7 +114,7 @@ options 是可选的配置参数。具有如下属性：
   <button onclick="start()">Click me to start!</button>
   <button onclick="stop()">Click me to stop!</button>
   <div id="piEstimate">Not started</div>
-  
+
   <script>
   var requestId = 0;
   var pointsTotal = 0;

@@ -4,7 +4,7 @@ title: 前端测试框架概览
 keywords: 前端, front-end, 测试
 description: 前端测试框架概览
 date: '2017-02-17 11:00:00 +0800'
-tags: [test]
+tags: [Test]
 categories: test
 ---
 
@@ -98,7 +98,7 @@ Nightwatch 是一个易于使用的，基于 Node.js 平台的浏览器自动化
 
 ## 参考
 
-[基于 React + Redux 的组件测试](http://front-ender.me/react/react-test-component.html)
+[基于 React + Redux 的组件测试](https://front-end.life/react/react-test-component.html)
 
 [前端单元测试探索](https://segmentfault.com/a/1190000006933557)
 

@@ -4,7 +4,7 @@ title: React 一叶知秋
 keywords: react, 源码, tips, setState, ReactEventListener
 description: React 一叶知秋（不断整理更新...）
 date: '2017-03-28 11:00:00 +0800'
-tags: [react]
+tags: [React]
 categories: react
 ---
 
@@ -20,9 +20,9 @@ React 对树的算法进行了简洁明了的优化，即对树进行分层比�
 
 setState 会触发 batchedUpdate，那么触发时机或者整个流程是怎样的呢？
 
-跟踪源码会发现，setState 实际上执行的是一个入队的操作，具体可参见文件 [React 源码概览二 （渲染模块）](http://front-ender.me/react/react-source-code-render.html)
+跟踪源码会发现，setState 实际上执行的是一个入队的操作，具体可参见文件 [React 源码概览二 （渲染模块）](https://front-end.life/react/react-source-code-render.html)
 
-那么如何执行这些更新操作呢？文章 [React Transaction 机制](http://front-ender.me/react/react-transaction.html) 中的一幅图已经介绍的很详细了。
+那么如何执行这些更新操作呢？文章 [React Transaction 机制](https://front-end.life/react/react-transaction.html) 中的一幅图已经介绍的很详细了。
 
 ![react_transaction](../resources/react_transaction.png)
 

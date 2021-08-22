@@ -4,7 +4,7 @@ title: 基于 React + Redux 的组件测试
 keywords: react, redux, test, component, mocha, enzyme, chai, 组件, 测试
 description: 基于 React + Redux 的组件测试
 date: '2016-11-10 11:00:00 +0800'
-tags: [react, redux, test]
+tags: [React, Redux, Test]
 categories: react
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: 再谈前端架构/体系
 date: '2018-06-18 08:00:00 +0800'
-tags: [architecture]
+tags: [Architecture]
 categories: architecture
 ---
 

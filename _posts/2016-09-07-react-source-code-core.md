@@ -4,7 +4,7 @@ title: React 源码概览一 （核心接口）
 keywords: react, 源码, 概览, overview, 核心
 description: React 源码概览一 （核心接口）
 date: '2016-09-07 11:00:00 +0800'
-tags: [react]
+tags: [React]
 categories: react
 ---
 

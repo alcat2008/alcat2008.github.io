@@ -2,7 +2,7 @@
 layout: post
 title: 前端技术概览 - 分享小纪
 date: '2018-04-27 08:00:00 +0800'
-tags: [architecture]
+tags: [Architecture]
 categories: architecture
 ---
 
@@ -67,10 +67,10 @@ npm - 包管理工具 vs yarn - 镜像，源，依赖关系
 - ui
 - 串行 / 并行
 
-module.exports = 
+module.exports =
 require()
 
-import 
+import
 export
 
 分治  <= 代码可控

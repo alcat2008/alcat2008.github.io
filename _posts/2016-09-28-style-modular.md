@@ -4,7 +4,7 @@ title: style 模块化思考
 keywords:
 description:
 date: '2016-09-28 11:00:00 +0800'
-tags: [react, css]
+tags: [React, CSS]
 categories: architecture
 ---
 

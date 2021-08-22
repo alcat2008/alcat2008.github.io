@@ -4,7 +4,7 @@ title: 使用 VSCode 调试基于 ES6 的 electron 主进程
 keywords: electron, debug, es6, main, vscode
 description: 使用 VSCode 调试 electron 主进程
 date: '2017-01-22 11:00:00 +0800'
-tags: [electron]
+tags: [Electron]
 categories: architecture
 ---
 

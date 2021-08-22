@@ -4,7 +4,7 @@ title: React 有状态组件及 key 属性的应用
 keywords: react, 有状态, stateful, key, react-router, reload, refresh
 description: React 有状态组件及 key 属性的应用，提供解决 react-router 中 route 组件刷新问题的新思路
 date: '2017-03-24 08:00:00 +0800'
-tags: [react]
+tags: [React]
 categories: react
 ---
 

@@ -4,7 +4,7 @@ title: React Transaction 机制
 keywords: react, transaction, 事务, analysis, 分析
 description: React 事务机制解析
 date: '2016-08-26 08:00:00 +0800'
-tags: [react]
+tags: [React]
 categories: react
 ---
 

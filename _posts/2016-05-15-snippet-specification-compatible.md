@@ -2,7 +2,7 @@
 layout: post
 title: 兼容多种模块规范
 date: '2016-05-15 15:37:01 +0800'
-tags: [javascript]
+tags: [JavaScript]
 categories: javascript
 ---
 

@@ -4,7 +4,7 @@ title: 前端工程化的理解
 keywords: 前端, 工程化, engineering
 description: 前端工程化的理解
 date: '2017-06-28 11:00:00 +0800'
-tags: [architecture]
+tags: [Architecture]
 categories: architecture
 ---
 

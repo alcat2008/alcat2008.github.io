@@ -4,7 +4,7 @@ title: 源码指引之 - React
 keywords: react, 源码, 流程, overview, workflow
 date: '2021-08-18 22:00:00 +0800'
 keywords: react
-tags: [react]
+tags: [React]
 categories: react
 ---
 
